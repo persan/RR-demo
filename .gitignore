@@ -1,0 +1,13 @@
+b__*
+*.o
+*.ali
+*.exech
+*.bexch
+*.stdout
+*.stderr
+*.cswi
+*.cgpr
+*-loc.xml
+*main
+messages.txt
+
