@@ -1,6 +1,8 @@
 b__*
 *.o
 *.ali
+*.a
+*.so
 *.exech
 *.bexch
 *.stdout
@@ -10,4 +12,5 @@ b__*
 *-loc.xml
 *main
 messages.txt
-
+*.pyc
+.#*#
