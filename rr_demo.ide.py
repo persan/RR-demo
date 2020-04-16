@@ -3,7 +3,8 @@ import GPS
 
 
 def on_project_loaded():
-    GPS.Console().write("rr_demo.ide loaded")
+    # GPS.Console().write("rr_demo.ide loaded")
+    pass
 
 
 try:  # Only load once

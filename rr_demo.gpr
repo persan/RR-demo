@@ -1,11 +1,10 @@
 project Rr_Demo is
 
    for Create_Missing_Dirs use "True";
-
-   for Source_Dirs use ("src/**");
+   for Languages use ("Makefile", "Python", "Ada");
+   for Source_Dirs use (".", "src/**");
    for Object_Dir use ".obj";
    for Exec_Dir use "bin";
-
    for Main use ("rr_demo-main.adb");
 
    package Builder is
@@ -13,12 +12,24 @@ project Rr_Demo is
    end Builder;
 
    package Compiler is
+      for Driver ("makefile") use "";
+      for Driver ("python") use "";
       for Switches ("ada") use ("-g", "-gnatwa", "-gnaty3BOabcdfhiklnprtux");
    end Compiler;
 
    package Linker is
       for Switches ("ada") use ("-g");
    end Linker;
+
+   package Make is
+      for Makefile use "Makefile";
+   end Make;
+
+   package Naming is
+      for Spec_Suffix ("Makefile") use ".mk";
+      for Specification_Exceptions ("Makefile") use ("Makefile");
+   end Naming;
+
 
 end Rr_Demo;
 
