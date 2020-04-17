@@ -1,4 +1,5 @@
 # RR demo
+This is a sample project with RR https://rr-project.org/ using gnatstudio that works out of the box. And provides som simple extra features in gnatstudio for debugging using rr.
 ## Setup
 * Enable necessary traces in the kernel and enable the plug-in. `make setup`
 
