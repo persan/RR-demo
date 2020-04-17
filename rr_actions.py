@@ -157,5 +157,6 @@ def rr_reverse_stepi():
     """Execute the progam in reverse until the previous instruction""" + \
         """ is reached"""
     rr.debugger.get().send("reverse-stepi")
+
 GPS.Preference("GPS6-Debugger-Debugger-Kind").set("Gdb")
 enable_menues(False)

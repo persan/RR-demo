@@ -1,7 +1,7 @@
 project Rr_Demo is
 
    for Create_Missing_Dirs use "True";
-   for Languages use ("Makefile", "Python", "Ada");
+   for Languages use ("Makefile", "Python", "Ada", "MarkDown");
    for Source_Dirs use (".", "src/**");
    for Object_Dir use ".obj";
    for Exec_Dir use "bin";
@@ -14,6 +14,7 @@ project Rr_Demo is
    package Compiler is
       for Driver ("makefile") use "";
       for Driver ("python") use "";
+      for Driver ("MarkDown") use "";
       for Switches ("ada") use ("-g", "-gnatwa", "-gnaty3BOabcdfhiklnprtux");
    end Compiler;
 
@@ -27,6 +28,8 @@ project Rr_Demo is
 
    package Naming is
       for Spec_Suffix ("Makefile") use ".mk";
+      for Spec_Suffix ("MarkDown") use ".md";
+      for Body_Suffix ("python") use ".py";
       for Specification_Exceptions ("Makefile") use ("Makefile");
    end Naming;
 
